@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>مقدمه الى لغة CSS مع شرح بعض الوسوم</title>
+    <style>
+        #bodyy {
+            background-color: rgb(84, 44, 163);
+            background-image: url("../../Img/backg.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            text-align: center;
+
+        }
+
+        .boxx {
+            background-color: rgba(182, 151, 213, 0.5);
+            border: 1px solid rgb(8, 122, 135);
+            border-left: 6px solid blue;
+            overflow: visible;
+            margin: 40px 400px;
+            padding: 5px 10px 7px;
+            border-radius: 20px;
+            text-align: start
+        }
+        .boxx:hover
+        {
+            padding: 30px;
+        }
+ 
+        div div {
+            background-color: rgba(34, 18, 51, 0.5);
+            border: 1px solid rgb(30, 16, 94);
+            border-left: 6px solid rgb(170, 90, 10);
+            margin: 50px 100px;
+            padding-left: 10px;
+            border-radius: 10px;
+            direction: ltr;
+            color: burlywood;
+            line-height: 1;
+            font-size: small;
+            font-weight: bold;
+        }
+
+        h1 {
+            color: rgb(28, 11, 106);
+            font-weight: bold;
+
+        }
+
+        div>h4 {
+            text-align: start;
+            color: rgb(30, 30, 134);
+
+        }
+
+        div>h3 {
+            text-align: start;
+            color: rgb(95, 51, 8);
+
+        }
+
+        div p span {
+            color: rgb(126, 14, 11);
+            font-weight: bold;
+        }
+
+        div p {
+            line-height: 0.5;
+        }
+
+        aside nav ul li {
+            background-color: rgba(182, 151, 213, 0.5);
+            list-style-type: none;
+            width: 15%;
+            padding: 20px 20px;
+            border: 1px dashed rgb(46, 30, 150);
+            border-radius: 5px;
+
+        }
+        aside nav ul li>a:hover {
+            border-left: 8px solid rgb(47, 124, 175);
+       
+            color: rgb(4, 112, 175);
+            
+        }
+
+  
+
+        aside ul li>a:focus {
+            
+            color: rgb(43, 4, 82);
+        }
+
+        aside nav ul li > a:visited{
+
+            color: rgb(71, 214, 10);
+        }
+
+        aside nav ul li>a {
+            padding: 10px;
+            text-decoration: none;
+            color: rgb(173, 38, 38);
+            font-size: 16px;
+            font-family: 'cairo';
+        }
+    </style>
+</head>
+
+<body id="bodyy" style="direction: rtl;">
+
+    <h1>شرح لتنسيق العناصر باستخدام CSS</h1>
+
+    <div class="boxx">
+        <h3>1. الخلفية (background-color & background-image)</h3>
+        <h4>A. <u>الخصائص:</u></h4>
+        <p>1- <span>background-color:</span> تحديد لون الخلفية</p>
+        <p>2- <span>background-image: </span>إضافة صورة خلفية (<span>url</span>("مسار/الصورة.jpg"))</p>
+        <p>3- <span>background-repeat:</span> التحكم في التكرار (repeat, no-repeat, repeat-x, repeat-y)</p>
+        <p>4- <span>background-position:</span> تحديد الموضع (top, bottom, left, right, center, x% y%)</p>
+        <p>5- <span>background-size:</span> التحكم في الحجم (cover, contain, قيم رقمية)</p>
+
+        <br>
+
+        <h4>B. <u>مثال: </u></h4>
+        <div>
+            <p><code> #bodyy {</code></p>
+            <p><code> background-color:rgb(84, 44, 163);</code> </p>
+            <p><code> background-image: url("../../Img/backg.jpg");</code> </p>
+            <p><code> background-repeat: no-repeat;</code></p>
+            <p><code> background-size: cover;</code></p>
+            <p><code> background-attachment: fixed;</code></p>
+            }
+        </div>
+
+    </div>
+
+    <div class="boxx">
+        <h3>2. النص (text):</h3>
+        <h4>A. <u>الخصائص:</u></h4>
+        <p>1- <span>text-align:</span> المحاذاة (left, right, center, justify)</p>
+        <p>2- <span>text-decoration:</span> التزيين (underline, overline, line-through, none)</p>
+        <p>3- <span>text-transform:</span> التحويل (uppercase, lowercase, capitalize)</p>
+        <p>4- <span>letter-spacing: </span>تباعد الحروف (قيم مثل 2px, -1px)</p>
+        <p>5- <span>line-height:</span> ارتفاع السطر (بدون وحدات أو قيم مثل 1.6)</p>
+        <p>6- <span>font-weight: bold;</span> تضخيم النص</p>
+
+        <br>
+        <h4>B. <u>مثال: </u></h4>
+        <div>
+
+            <p><code>.tt</code> {</p>
+            <p><code> text-align: center;</code></p>
+            <p><code> line-height: 0.5;</code></p>
+            <p><code> text-decoration: none;</code></p>
+            <p><code> font-size: small;</code></p>
+            <p><code>font-weight: bold;</code></p>
+        </div>
+    </div>
+
+
+    <div class="boxx">
+        <h3>3. الخط (font):</h3>
+        <h4><u>الخصائص:</u></h4>
+        <p>1- <span>font-family: </span>عائلة الخط ("Arial", "Helvetica", 'cairo')</p>
+        <P>2- <span>font-size:</span> حجم الخط (16px, 1.2rem, 120%)</P>
+        <p>3- <span>font-weight:</span> السمك (normal, bold, 700)</p>
+        <br>
+        <h4>B. <u>مثال: </u></h4>
+        <div>
+            <p><code>ffoun { </code></p>
+            <p><code>font-family: 'cairo';</code></p>
+            <p><code>font-size: 16px;</code></p>
+            <p><code>font-weight: normal;</code></p>
+            }
+        </div>
+
+    </div>
+
+
+    <div class="boxx">
+        <h3>4. الألوان (color): </h3>
+        <h4><u>أنظمة الألوان:</u></h4>
+        <p>1- <span>HEX: #ffffff </span>(أبيض)</p>
+        <p>2- <span>RGB: rgb(255, 255, 255)</span> RGB</p>
+        <p>3- <span> RGBA: rgb(0, 0, 0, 0.5)</span> (شفافية 50%)</p>
+
+        <br>
+        <h4><u>مثال :</u></h4>
+        <div>
+            <p><code>.lis {</code></p>
+            <p><code>color: red;</code></p>
+            <p><code>background-color: rgb(20%, 100%, 50%, 0.8)</code></p>
+            <p><code>border: 2px solid rgp(0, 0, 0)</code></p>
+            }
+        </div>
+    </div>
+
+
+    <div class="boxx">
+        <h3>5. الحدود (border): </h3>
+        <h4><u>الخصائص:</u></h4>
+        <p>1- <span>border-width: </span>سمك الحدود</p>
+        <p>2- <span>border-style:</span> النمط (solid, dotted, dashed, double)</p>
+        <p>3- <span>border-color:</span> لون الحدود</p>
+        <p>4- <span>border-radius:</span> تدوير الزوايا</p>
+        <p>5- <span>border-collapse:</span> دمج حدود الجداول</p>
+     
+        <h4><u>مثال :</u></h4>
+        <div>
+           <p><code> .boxx{</code></p>
+            <p><code> border: 1px solid rgb(8, 122, 135);</code></p>
+            <p><code> border: 6px solid blue;</code></p>
+            <p><code>  border-radius: 15px 0 15px 0; </code></p>
+           }
+        </div>
+    </div>
+
+
+    <div class="boxx">
+        <h3>6.  الحشو الداخلي (padding):</h3>
+        <p><strong>المفهوم: المساحة بين المحتوى والحدود</strong></p>
+        <h4><u>طرق التحديد:</u></h4>
+        <p><span>padding: 10px;</span> (كل الجهات)</p>
+        <p><span>padding: 10px 20px;</span> (عمودي/أفقي)</p>
+        <p><span> padding: 10px 20px 14px 20px;</span> (أعلى، يمين، أسفل، يسار)</p>
+        
+    </div>
+    
+
+    <div class="boxx">
+        <h3>7.  الهوامش الخارجية (margin):</h3>
+        <p><strong>المفهوم: المساحة خارج الحدود (بين العناصر)  </strong></p>
+        <h4><u>خصائص مهمة:</u></h4>
+        <p>1- <span>margin: auto;</span> (التوسيط الأفقي)</p>
+        <p>2- <span>margin-collapse:</span> اندماج الهوامش الرأسية</p>
+        <p>3- <span>القيم السلبية </span>(margin: -10px;) </p>
+    </div>
+    
+    <aside>
+        <nav>
+            <ul>
+                <li><a href="#"> الرئيسية</a></li>
+                <li><a href="#"> الاخبار</a></li>
+                <li><a href="#"> الاعلانات</a></li>
+                <li><a href="#"> القائمة</a></li>
+                <li><a href="#"> من نحن</a></li>
+                <li><a href="#"> اتصل بنا</a></li>
+            </ul>
+        </nav>
+
+</body>
+
+</html>
